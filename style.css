@@ -504,8 +504,7 @@ h3 { font-size: 20px; font-weight: 700; color: var(--text-bright); margin-bottom
         position: static;
         width: 100%;
         max-width: 280px;
-        box-shadow: none;
-        background: rgba(255,255,255,0.03);
+        background: #eaaa32;
     }
 }
 
@@ -600,6 +599,17 @@ tr:hover { background: var(--bg-card-hover); }
     max-height: 280px;
     border-radius: 10px;
     box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+}
+@media (max-width: 900px) {
+    .gdd-media-left {
+        margin-left: 0;
+        margin-top: 16px;
+        text-align: center;
+        z-index: 1;
+    }
+    .gdd-media-left .gdd-media-img {
+        max-height: 220px;
+    }
 }
 
 /* ═══ ITERATIONS (Magazine style) ═══ */
@@ -791,15 +801,149 @@ tr:hover { background: var(--bg-card-hover); }
 footer { text-align: center; padding: 30px; border-top: 1px solid var(--border); font-size: 12px; color: var(--text-dim); }
 
 /* ═══ RESPONSIVE ═══ */
+
+/* Tablet */
 @media (max-width: 900px) {
     .projects-grid { grid-template-columns: 1fr; }
     .mechanic-duo { grid-template-columns: 1fr; }
+    .tech-stack { grid-template-columns: 1fr; }
+    .gdd-stats-grid { grid-template-columns: 1fr 1fr; }
+    .gdd-boxes-grid { grid-template-columns: 1fr 1fr; }
+    .trailers-grid { grid-template-columns: 1fr; }
+
+    /* Hero: stack vertically */
+    #hero .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-text { padding: 20px; }
+    .hero-cta { justify-content: center; }
+    .computer-mockup { width: 80vw; max-width: 400px; }
+
+    /* Character arts: center */
+    .fiona-character-art,
+    .bestiary-art {
+        float: none;
+        display: block;
+        margin: 0 auto 20px auto !important;
+    }
+    .fiona-character-art { height: 300px; }
+    .bestiary-art { height: 200px; }
+
+    /* Liva */
+    .liva-character-art {
+        float: none;
+        display: block;
+        margin: 0 auto 20px auto;
+        height: 350px;
+    }
+
+    /* Tama window */
+    .tama-character-window {
+        float: none;
+        display: block;
+        margin: 0 auto 24px auto !important;
+        width: auto;
+        max-width: 250px;
+    }
+
+    /* OS windows */
+    .os-window { margin-bottom: 20px; }
+    .os-window-body { padding: 16px; }
+
+    /* Loop diagrams */
+    .loop-diagram { flex-direction: column; align-items: center; }
+    .loop-arrow { transform: rotate(90deg); padding: 0; margin: 8px 0 !important; }
+
+    /* Sections */
+    section { padding: 60px 0; }
+    .project-section { padding-top: 80px; padding-bottom: 80px; }
+    #experience { padding-top: 80px; padding-bottom: 80px; }
+    h2 { font-size: 28px; }
+    h3 { font-size: 18px; }
 }
-@media (max-width: 768px) {
+
+/* Mobile */
+@media (max-width: 600px) {
+    .container { padding: 0 16px; }
+
+    /* Nav */
     .nav-links { display: none; }
     .nav-toggle { display: block; }
-    .loop-diagram { flex-direction: column; align-items: center; }
-    .loop-arrow { transform: rotate(90deg); padding: 0; }
+
+    /* Hero */
+    #hero { padding: 60px 0 40px 0; }
+    #hero .hero-content { flex-direction: column; }
+    .computer-mockup { width: 90vw; max-width: 300px; }
+    .hero-text { padding: 16px; }
+    .hero-text h1 { font-size: 32px; }
+    .hero-sub { font-size: 14px; }
+
+    /* Typography */
+    h2 { font-size: 24px; }
+    h3 { font-size: 16px; }
+    .section-sub { font-size: 14px; margin-bottom: 32px; }
+    .section-tag { font-size: 10px; letter-spacing: 3px; }
+
+    /* Sections */
+    section { padding: 40px 0; }
+    .project-section { padding-top: 60px; padding-bottom: 60px; }
+    #experience { padding-top: 60px; padding-bottom: 60px; }
+    .subsection { margin-top: 32px; }
+
+    /* Grids to single column */
+    .gdd-stats-grid { grid-template-columns: 1fr; }
+    .gdd-boxes-grid { grid-template-columns: 1fr; }
+    .mechanic-duo { grid-template-columns: 1fr; gap: 12px; }
+    .tech-stack { grid-template-columns: 1fr; }
+
+    /* Pitch cards */
+    .pitch-card { padding: 16px; }
+    .pitch-text p { font-size: 14px; }
+
+    /* OS windows mobile */
+    .os-window-header { font-size: 14px; padding: 8px 10px; }
+    .os-window-body { padding: 12px 14px; }
+    .tech-item h4 { font-size: 13px; }
+
+    /* Character arts */
+    .fiona-character-art { height: 220px; margin: 0 auto 16px auto !important; }
+    .bestiary-art { height: 180px; }
+    .tama-character-window { max-width: 200px; }
+    .tama-character-img { height: 180px; }
+
+    /* Loop steps */
+    #fiona .loop-step,
+    #hideattack .loop-step { width: 100%; max-width: 260px; }
+
+    /* Iterations */
+    .iter-card { flex-direction: column; }
+    .iter-num { margin-bottom: 4px; }
+
+    /* GDD media images */
+    .gdd-media-img { max-height: 200px; }
+
+    /* Videos */
+    .video-embed { border-radius: 8px; }
+
+    /* Steps */
+    .gdd-step { flex-direction: column; }
+    .gdd-step-num { margin-bottom: 8px; }
+
+    /* Contact */
+    .contact-grid { flex-direction: column; align-items: center; }
+    .contact-card { width: 100%; justify-content: center; }
+
+    /* Title logos */
+    .title-logo { height: 80px; }
+
+    /* Timeline */
+    .timeline { padding-left: 28px; }
+
+    /* Skills */
+    .skill-tag { font-size: 11px; padding: 4px 10px; }
+
+    /* Level layout */
     .level-layout { grid-template-columns: 1fr; }
 }
 
