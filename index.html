@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nicolas Biakou — Game Designer Portfolio</title>
+    <meta name="description" content="Portfolio Game Design de Nicolas Biakou. Projets : Fiona Volcano, Hide Attack, FocusPals.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+    <div class="nav-inner">
+        <div class="nav-links">
+            <a href="#projects">Projets</a>
+            <a href="#fiona">Fiona Volcano</a>
+            <a href="#hideattack">Hide Attack</a>
+            <a href="#focuspals">FocusPals</a>
+            <a href="#experience">Parcours</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <button class="nav-toggle" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+    </div>
+</nav>
+
+<div class="top-light-bg">
+<!-- HERO -->
+<section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+        <div class="computer-mockup">
+            <img src="computer.png" alt="Computer" class="computer-img">
+            <video class="computer-video" autoplay muted loop playsinline>
+                <source src="VideoCOmputer.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="hero-text">
+            <p class="hero-tag">GAME DESIGNER / LEVEL DESIGNER / PROTOTYPAGE</p>
+            <h1>Bienvenue</h1>
+            <p class="hero-sub">Je m'appelle <strong>Nicolas Biakou</strong>, étudiant diplômé spécialisé en <strong>Game Design</strong>, <strong>Level Design</strong> et <strong>prototypage</strong>.<br>Vous trouverez ci-dessous mon portfolio mettant en avant certains de mes travaux en développement de jeux.</p>
+            <div class="hero-cta">
+                <a href="#projects" class="btn btn-primary">Voir mes projets</a>
+                <a href="#contact" class="btn btn-ghost">Contact</a>
+            </div>
+        </div>
+    </div>
+    <div class="scroll-hint"><i class="fa-solid fa-chevron-down"></i></div>
+</section>
+
+<!-- PROJECTS OVERVIEW -->
+<section id="projects">
+    <div class="container">
+        <p class="section-tag">PROJETS</p>
+        <h2>Ce que je crée</h2>
+        <p class="section-sub">Trois projets, trois genres, trois approches du game design</p>
+
+        <div class="projects-grid">
+            <a href="#fiona" class="project-card project-fiona">
+                <img src="Logo_FionaVolcano.png" alt="Fiona Volcano" class="project-logo">
+                <div class="project-info">
+                    <span class="project-engine">Unreal Engine</span>
+                    <h3>Fiona Volcano</h3>
+                    <p>Roguelite avec tiles destructibles, systèmes d'équipement et gestion de la chaleur</p>
+                    <span class="project-link">Voir le projet →</span>
+                </div>
+            </a>
+            <a href="#hideattack" class="project-card project-hide">
+                <img src="Logo_HideAttack.png" alt="Hide Attack" class="project-logo">
+                <div class="project-info">
+                    <span class="project-engine">Unreal Engine</span>
+                    <h3>Hide Attack</h3>
+                    <p>Beat'em up / party game musical coop jusqu'à 4 joueurs, inspiré de Mars Attacks</p>
+                    <span class="project-link">Voir le projet →</span>
+                </div>
+            </a>
+            <a href="#focuspals" class="project-card project-focus">
+                <img src="Logo_FocusPals.png" alt="FocusPals" class="project-logo">
+                <div class="project-info">
+                    <span class="project-engine">Godot 4 + Python/IA</span>
+                    <h3>FocusPals</h3>
+                    <p>Assistant personnel gamifié avec personnage 3D animé, intégration IA et multi-plateforme</p>
+                    <span class="project-link">Voir le projet →</span>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+</div>
+
+<!-- ══════════════════════════════════ -->
+<!--         FIONA VOLCANO             -->
+<!-- ══════════════════════════════════ -->
+<section id="fiona" class="project-section">
+    <div class="container" style="position: relative;">
+        <p class="section-tag">PROJET 01</p>
+        <h2><img src="Logo_FionaVolcano.png" alt="Fiona Volcano" class="title-logo"></h2>
+        <div class="pitch-card pitch-fiona">
+            <div class="pitch-text">
+                <h3>Le Pitch</h3>
+                <p><strong>Fiona Volcano</strong> est un roguelite dans la lignée des "Digger" (Dig Dug, Mr Driller, Motherload). Le joueur incarne Fiona, une exploratrice avide d'or, qui s'aventure dans les profondeurs d'un <strong>volcan actif</strong> pour piller les trésors du roi mourant. L'environnement est composé de <strong>tiles 100% destructibles</strong>, chaque run est unique : gérer <strong>la chaleur</strong>, collecter des ressources, s'équiper, et surtout… <strong>savoir quand fuir</strong>.</p>
+            </div>
+        </div>
+
+        <!-- FIONA CHARACTER DECORATION -->
+        <img src="Fiona.png" alt="Fiona" class="fiona-character-art">
+
+        <!-- CORE LOOP -->
+        <div class="subsection">
+            <h3>Boucle de Jeu</h3>
+            <div class="loop-diagram">
+                <div class="loop-step loop-step-1"><div class="loop-icon"><i class="fa-solid fa-hammer"></i> <i class="fa-solid fa-gem"></i></div><div class="loop-label">Explorer</div><p class="loop-desc">Miner les tiles, collecter trésors et reliques</p></div>
+                <div class="loop-step loop-step-2"><div class="loop-icon"><i class="fa-solid fa-volcano"></i></div><div class="loop-label">Survivre</div><p class="loop-desc">Éruptions, chaleur, fuite</p></div>
+                <div class="loop-step loop-step-3"><div class="loop-icon"><i class="fa-solid fa-music"></i></div><div class="loop-label">Danser</div><p class="loop-desc">Jeu de rythme pour protéger son butin</p></div>
+                <div class="loop-step loop-step-4"><div class="loop-icon"><i class="fa-solid fa-shop"></i></div><div class="loop-label">S'équiper</div><p class="loop-desc">Hub, boutiques, enchères</p></div>
+            </div>
+        </div>
+
+        <!-- GIF off-center left, overlapping background -->
+        <div class="gdd-media gdd-media-left">
+            <img src="GifFionaHitChest.gif" alt="Fiona frappant un coffre" class="gdd-media-img">
+            <p class="gdd-media-caption">Fiona tapant sur un coffre pour récupérer son contenu</p>
+        </div>
+
+        <div class="subsection">
+            <h3>Statistiques du Personnage</h3>
+            <div class="gdd-stats-grid">
+                <div class="gdd-stat-item"><div class="gdd-stat-icon"><i class="fa-solid fa-person-running"></i></div><h4>Vitesse</h4><p>Affecte la vitesse de déplacement et de ramassage d'objets.</p></div>
+                <div class="gdd-stat-item"><div class="gdd-stat-icon"><i class="fa-solid fa-dumbbell"></i></div><h4>Force</h4><p>Détermine la capacité à porter des objets lourds et augmente légèrement les dégâts.</p></div>
+                <div class="gdd-stat-item"><div class="gdd-stat-icon"><i class="fa-solid fa-fire"></i></div><h4>Résistance</h4><p>Détermine la résistance à la chaleur de Fiona.</p></div>
+                <div class="gdd-stat-item"><div class="gdd-stat-icon"><i class="fa-solid fa-seedling"></i></div><h4>Chance</h4><p>Augmente la probabilité de trouver des objets rares.</p></div>
+            </div>
+            <div class="gdd-horizontal-flag">
+                <i class="fa-solid fa-crown gdd-horizontal-flag-icon"></i>
+                <p><strong>Prestige :</strong> Un "outil situationnel" basé sur l'équipement porté. Un prestige élevé ouvre l'accès à des zones de luxe (enchères) mais augmente les prix chez les marchands de base. Un prestige faible fait l'inverse, donnant accès à des prix plus justes mais fermant les portes des beaux quartiers.</p>
+            </div>
+        </div>
+
+        <!-- ERUPTIONS -->
+        <div class="subsection">
+            <h3>Les Éruptions : Escalade Environnementale</h3>
+            <p class="section-body">Pas de timer UI affiché à l'écran. Le volcan communique le danger par <strong>escalade environnementale</strong> organique.</p>
+            <div class="gdd-stats-grid">
+                <div class="gdd-stat-item"><div class="gdd-stat-icon"><i class="fa-solid fa-temperature-empty"></i></div><h4>Phase 1 : Calme</h4><p>Grondements lointains. Le joueur explore librement et sereinement les galeries.</p></div>
+                <div class="gdd-stat-item"><div class="gdd-stat-icon"><i class="fa-solid fa-temperature-half" style="color:#f59e0b"></i></div><h4>Phase 2 : Tension</h4><p>Secousses, fissures lumineuses apparantes. Des signes souvent trompeurs entretiennent le doute.</p></div>
+                <div class="gdd-stat-item"><div class="gdd-stat-icon"><i class="fa-solid fa-temperature-full" style="color:#e85d3a"></i></div><h4>Phase 3 : Danger</h4><p>Lave active, débris projetés, musique intense. Il faut sérieusement envisager la fuite vers la sortie.</p></div>
+                <div class="gdd-stat-item"><div class="gdd-stat-icon"><i class="fa-solid fa-volcano" style="color:#e84a6a"></i></div><h4>Phase 4 : Fuite</h4><p>Nuée ardente explosive traversant les failles. Sprint final et QTE de corde pour atteindre la surface.</p></div>
+            </div>
+            <p class="design-note">Le joueur ne sait jamais exactement quand l'éruption va frapper. Le doute permanent crée une tension qui pousse à des décisions risquées : "encore un coffre… ou je cours ?"</p>
+            <div class="gdd-media">
+                <img src="ImageFioneFleeing.jpg" alt="Fiona fuyant une éruption" class="gdd-media-img">
+                <p class="gdd-media-caption">Fiona fuyant une éruption volcanique</p>
+            </div>
+        </div>
+
+        <!-- SAC -->
+        <div class="subsection">
+            <h3>Le Sac : Risque vs. Récompense Physique</h3>
+            <p class="section-body">Le sac à dos est au cœur de chaque décision. Chaque trésor ramassé est un pari conscient sur la capacité de fuite.</p>
+            <div class="gdd-stats-grid">
+                <div class="gdd-stat-item"><div class="gdd-stat-icon"><i class="fa-solid fa-weight-hanging"></i></div><h4>Poids &amp; Lenteur</h4><p>Chaque objet a un poids réel. Plus le sac est lourd, plus Fiona est lente pour fuir. Elle peut cependant contrebalancer cela avec le "Bowling Mode", qui permet de garder de la vitesse avec beaucoup d'objets sur le dos, mais en perdant du contrôle en contrepartie.</p></div>
+                <div class="gdd-stat-item"><div class="gdd-stat-icon"><i class="fa-solid fa-expand"></i></div><h4>Élasticité du Sac</h4><p>Dépasser la capacité de base augmente drastiquement le risque d'explosion du sac au moindre choc.</p></div>
+                <div class="gdd-stat-item"><div class="gdd-stat-icon"><i class="fa-solid fa-bowling-ball"></i></div><h4>Bowling Mode</h4><p>Un sac assez gros accumulant de la vitesse devient une boule dévastatrice qui broie tout sur son passage.</p></div>
+                <div class="gdd-stat-item"><div class="gdd-stat-icon"><i class="fa-solid fa-trash-can"></i></div><h4>Tri Rapide</h4><p>Mécanique d'urgence consistant à ouvrir le sac in-game pour jeter du loot afin d'alléger son poids très rapidement.</p></div>
+            </div>
+            <div class="gdd-media">
+                <img src="BowlingMode.jpg" alt="Bowling Mode" class="gdd-media-img">
+                <p class="gdd-media-caption">Le Bowling Mode : Fiona utilise son sac comme arme dévastatrice</p>
+            </div>
+        </div>
+
+        <!-- HUB (New GDD addition) -->
+        <div class="subsection">
+            <h3>Le Hub : Zone de Préparation</h3>
+            <p class="section-body">Zone sûre entre chaque "run". Elle contient plusieurs points d'intérêt essentiels pour se préparer à la prochaine descente.</p>
+            <div class="gdd-boxes-grid">
+                <div class="gdd-box">
+                    <h4>La Planque</h4>
+                    <p>Permet de stocker son trésor en lieu sûr de manière permanente entre les expéditions.</p>
+                </div>
+                <div class="gdd-box">
+                    <h4>La Boutique</h4>
+                    <p>Vend de l'équipement standard commun (outils basiques, sacs de base, réserves d'eau).</p>
+                </div>
+                <div class="gdd-box">
+                    <h4>Sorcière Gitane</h4>
+                    <p>Vend, achète et identifie les reliques magiques et les objets non identifiés ramassés.</p>
+                </div>
+                <div class="gdd-box" style="border-color: rgba(232, 74, 106, 0.3);">
+                    <h4 style="color: var(--fiona-primary);">Enchères</h4>
+                    <p>Vendre des objets très chers et en acheter de très rares. L'accès requiert un haut niveau de prestige.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ENCHÈRES (New GDD addition) -->
+        <div class="subsection">
+            <h3>Système d'Enchères : Objectifs & Déroulement</h3>
+            <p class="section-body">Le système d'enchères est un mini-jeu social et économique conçu pour enrichir l'expérience au-delà de la boucle principale : équilibrer l'économie en limitant l'enrichissement rapide, et contrôler l'accès aux objets de fin de jeu introuvables autrement.</p>
+            <div class="gdd-steps-container">
+                <div class="gdd-step">
+                    <div class="gdd-step-num">1</div>
+                    <div class="gdd-step-content">
+                        <h4>Phase de Préparation</h4>
+                        <p>Avant le début des enchères, un tableau présente tous les objets mis en vente. Le joueur peut consulter les lots des PNJ et y ajouter les siens. Moment clé pour décider stratégiquement de ce qui a le plus de potentiel aujourd'hui.</p>
+                    </div>
+                </div>
+                <div class="gdd-step">
+                    <div class="gdd-step-num">2</div>
+                    <div class="gdd-step-content">
+                        <h4>Début de l'Enchère</h4>
+                        <p>Une fois lancée, les objets sont présentés un par un. Le joueur peut choisir de miser pour acheter, ou simplement observer les réactions lorsque l'un de ses propres objets rares est mis sur la table.</p>
+                    </div>
+                </div>
+                <div class="gdd-step">
+                    <div class="gdd-step-num">3</div>
+                    <div class="gdd-step-content">
+                        <h4>Miser et Surenchérir</h4>
+                        <p>Le joueur et les PNJ enchérissent tour à tour. Le joueur peut <strong>lire l'audience</strong> (exclamations, sifflements) et cibler les <strong>collectionneurs spécifiques</strong>. Un score de prestige élevé peut intimider les acheteurs concurrents, les poussant à se retirer.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FIN DE LA RUN (Shower of Fortune) -->
+        <div class="subsection">
+            <h3>Fin de Run : La "Shower of Fortune"</h3>
+            <p class="section-body">À la fin d'une run réussie, un mini-jeu optionnel de rythme se déclenche. Fiona <strong>danse au milieu de son butin</strong> pour impressionner les villageois. Une performance réussie (QTE musical) convainc le public ravi de lancer des pourboires et des <strong>objets bonus rares</strong> directement sur scène.</p>
+        </div>
+
+        <!-- ECOSYSTEME INTEGRE -->
+        <div class="subsection">
+            <h3>Bestiaire Systémique</h3>
+            <p class="section-body">Chaque créature du donjon possède une fonction qui s'intègre profondément dans le gameplay. Les ennemis ne sont pas de simples obstacles pour "remplir" la map, ils interagissent avec les mécaniques de base (chaleur, objets, trésors) et forcent des choix tactiques.</p>
+            
+            <img src="Chicken.jpg" alt="Fiona poursuivant un poulet" class="bestiary-art">
+
+            <div class="gdd-stats-grid" style="margin-top: 24px;">
+                <div class="gdd-stat-item"><div class="gdd-stat-icon"><i class="fa-solid fa-drumstick-bite"></i></div><h4>Le Poulet d'Or</h4><p>Pond des œufs de valeur en fuyant. Pousse le joueur à la cupidité, l'incitant à le poursuivre dans des zones très dangereuses.</p></div>
+                <div class="gdd-stat-item"><div class="gdd-stat-icon"><i class="fa-solid fa-fire-flame-curved"></i></div><h4>La Flammèche</h4><p>Augmente drastiquement la température autour d'elle, interagissant directement avec le système de chaleur létal du volcan.</p></div>
+                <div class="gdd-stat-item"><div class="gdd-stat-icon"><i class="fa-solid fa-locust"></i></div><h4>Le Rat</h4><p>Interagit avec les trésors en volant les objets au sol. Force le joueur à prioriser le ramassage pour protéger son précieux butin.</p></div>
+                <div class="gdd-stat-item"><div class="gdd-stat-icon"><i class="fa-solid fa-ghost"></i></div><h4>La Banshee</h4><p>Génère un froid glacial mortel. Paradoxalement, sa zone d'aura peut servir de refuge de fortune pendant une éruption de chaleur globale.</p></div>
+                <div class="gdd-stat-item"><div class="gdd-stat-icon"><i class="fa-solid fa-box"></i></div><h4>Le Mimic</h4><p>Imite l'apparence des trésors. Pousse le joueur à analyser visuellement chaque coffre avec prudence au lieu d'ouvrir aveuglément.</p></div>
+                <div class="gdd-stat-item"><div class="gdd-stat-icon"><i class="fa-solid fa-mountain"></i></div><h4>Le Golem</h4><p>Capable de détruire des parois indestructibles pour Fiona. Peut être consciemment attiré par le joueur pour ouvrir un passage secret vers des trésors.</p></div>
+            </div>
+        </div>
+
+        <!-- DECISIONS DE DESIGN -->
+        <div class="subsection">
+            <h3>Décisions de Design (Annexes)</h3>
+            <div class="iterations">
+                <div class="iter-card"><div class="iter-num">01</div><div class="iter-content"><h4>Gestion de la chaleur comme tension</h4><p>Sans contrainte temporelle ou physique, le joueur mine sans fin. La chaleur croissante force l'équilibre continu entre l'avidité (progression) et la peur (survie).</p></div></div>
+                <div class="iter-card"><div class="iter-num">02</div><div class="iter-content"><h4>Spécialisation des outils</h4><p>Un seul outil optimal rendait l'exploration monotone. La solution d'équilibrage : les Pioches font +100% sur les parois, les Maillets +100% sur les coffres, les Épées +250% sur les créatures.</p></div></div>
+            </div>
+        </div>
+
+        <!-- LEVEL DESIGN -->
+        <div class="subsection">
+            <h3>Level Design : Génération Procédurale & Curiosité Récompensée</h3>
+            <p class="section-body">Chaque descente dans le volcan est unique. Le terrain est généré par un système procédural multi-couche basé sur des <strong>Perlin Noise</strong> superposées, combiné à des niveaux pré-conçus ("presets") qui s'intègrent de manière pondérée dans la grille.</p>
+
+            <h4 style="margin: 24px 0 12px; color: var(--text-bright);">Pipeline de Génération</h4>
+            <div class="gdd-steps-container">
+                <div class="gdd-step">
+                    <div class="gdd-step-num">1</div>
+                    <div class="gdd-step-content">
+                        <h4>Placement des Rooms & Temples</h4>
+                        <p>Définition des points d'apparition des structures pré-conçues (salles de trésor, temples, corridors). Chaque preset a un poids (0 à 1) : à 1 la case est placée telle quelle, à 0 c'est la génération procédurale qui prend le relais.</p>
+                    </div>
+                </div>
+                <div class="gdd-step">
+                    <div class="gdd-step-num">2</div>
+                    <div class="gdd-step-content">
+                        <h4>Biomes (4 Noise Maps)</h4>
+                        <p>Quatre paramètres de bruit se combinent pour déterminer le biome : <strong>Profondeur</strong> (gradient linéaire), <strong>Porosité</strong> (éclaircies), <strong>Température</strong> (magma) et <strong>Humidité</strong> (eau). Exemples : Humidité + Température = Sources Chaudes, Porosité + Humidité = Forêt souterraine.</p>
+                    </div>
+                </div>
+                <div class="gdd-step">
+                    <div class="gdd-step-num">3</div>
+                    <div class="gdd-step-content">
+                        <h4>Trésors & Créatures</h4>
+                        <p>Placement intelligent basé sur la topologie générée. Les trésors sont placés là où ils <strong>récompensent la curiosité</strong> : grottes isolées, bouts de corridors, îlots au milieu de lacs de lave, derrière des parois de roche dure.</p>
+                    </div>
+                </div>
+            </div>
+
+            <h4 style="margin: 24px 0 12px; color: var(--text-bright);">Curiosité Récompensée : Zones d'Intérêt</h4>
+            <p class="section-body">Le placement des trésors n'est pas aléatoire. Le système analyse la topologie du terrain généré pour identifier les <strong>zones d'intérêt</strong> (cul-de-sacs, cavités isolées, îlots entourés d'obstacles) et y concentrer les récompenses rares. Le joueur qui explore au-delà du chemin évident est systématiquement récompensé.</p>
+            <div class="gdd-boxes-grid">
+                <div class="gdd-box">
+                    <h4>Treasure Rooms</h4>
+                    <p>Salles cachées avec une concentration élevée de trésors. L'objectif est de les trouver.</p>
+                </div>
+                <div class="gdd-box">
+                    <h4>Challenge Rooms</h4>
+                    <p>Trésors précieux entourés d'eau, de lave ou de monstres. Haut risque, haute récompense.</p>
+                </div>
+                <div class="gdd-box">
+                    <h4>Corridor Rooms</h4>
+                    <p>Un trésor quasi garanti au bout de chaque long couloir. La persévérance est récompensée.</p>
+                </div>
+                <div class="gdd-box" style="border-color: rgba(232, 74, 106, 0.3);">
+                    <h4 style="color: var(--fiona-primary);">Temple Rooms</h4>
+                    <p>Murs quasi impénétrables, pièges, et choix cruel : prendre un item en verrouille les autres.</p>
+                </div>
+            </div>
+
+            <h4 style="margin: 24px 0 12px; color: var(--text-bright);">Démonstration : Création de Preset</h4>
+            <div class="gdd-media">
+                <img src="LevelCreation.gif" alt="Démonstration de création de niveau preset" class="gdd-media-img" style="max-height: 450px;">
+                <p class="gdd-media-caption">Création d'un preset de niveau dans l'éditeur</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════ -->
+<!--          HIDE ATTACK              -->
+<!-- ══════════════════════════════════ -->
+<section id="hideattack" class="project-section section-alt">
+    <div class="ha-pattern-bg"></div>
+    <div class="container">
+        <p class="section-tag">PROJET 02</p>
+        <h2><img src="Logo_HideAttack.png" alt="Hide Attack" class="title-logo"></h2>
+        <p class="section-sub">Beat'em Up / Party Game Musical · Unreal Engine · Coop 2-4 joueurs</p>
+
+        <!-- LIVA CHARACTER DECORATION -->
+        <img src="Liva.png" alt="Liva" class="liva-character-art">
+
+        <div class="pitch-card pitch-hide">
+            <div class="pitch-text">
+                <h3>Le Pitch</h3>
+                <p>Des extraterrestres envahissent la Terre, mais ils ont un point faible : <strong>ils ne supportent pas la musique !</strong> Attaquez les aliens quand la musique joue, et cachez-vous quand elle s'arrête. Problème : <strong>il n'y a pas de cachettes pour tout le monde</strong>. Un mélange explosif de beat'em up, chaises musicales et party game.</p>
+            </div>
+        </div>
+
+        <!-- TRAILERS -->
+        <div class="subsection">
+            <h3>Trailers : Gameplay & Cinématique</h3>
+            <div class="trailers-grid">
+                <div class="video-embed video-main">
+                    <iframe src="https://www.youtube.com/embed/SP7jf41oX_4" title="Hide Attack - Gameplay Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video-embed video-main">
+                    <iframe src="https://www.youtube.com/embed/6SNvtMmGzZY" title="Hide Attack - Cinematic Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- CORE MECHANICS -->
+        <div class="subsection">
+            <h3>Mécanique Centrale : la Musique</h3>
+            <div class="mechanic-duo">
+                <div class="mechanic-state state-music-on">
+                    <h4><i class="fa-solid fa-music"></i> Musique ON</h4>
+                    <ul>
+                        <li>Les aliens se bouchent les oreilles, sont faibles</li>
+                        <li>Les joueurs attaquent librement</li>
+                        <li>Les Beat Sabers infligent des dégâts sur la mesure</li>
+                        <li>Chaque coup consécutif au rythme augmente les dégâts</li>
+                    </ul>
+                </div>
+                <div class="mechanic-state state-music-off">
+                    <h4><i class="fa-solid fa-volume-xmark"></i> Musique OFF</h4>
+                    <ul>
+                        <li>Yeux incandescents, aliens mortels</li>
+                        <li>Les aliens dévorent les joueurs</li>
+                        <li>Trouver une cachette ou mourir</li>
+                        <li>Les joueurs se disputent les planques</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- GAME LOOP -->
+        <div class="subsection">
+            <h3>Boucle de Jeu</h3>
+            <div class="loop-diagram">
+                <div class="loop-step"><div class="loop-icon"><i class="fa-solid fa-music"></i></div><div class="loop-label">Musique</div><p class="loop-desc">Attaquer les aliens au rythme</p></div>
+                <div class="loop-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                <div class="loop-step"><div class="loop-icon"><i class="fa-solid fa-triangle-exclamation"></i></div><div class="loop-label">Indices</div><p class="loop-desc">Anticiper l'arrêt de la musique</p></div>
+                <div class="loop-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                <div class="loop-step"><div class="loop-icon"><i class="fa-solid fa-eye-slash"></i></div><div class="loop-label">Se cacher</div><p class="loop-desc">Trouver une cachette, pousser les autres</p></div>
+                <div class="loop-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                <div class="loop-step"><div class="loop-icon"><i class="fa-solid fa-truck"></i></div><div class="loop-label">BangerVan</div><p class="loop-desc">Déclencher des attaques sonores</p></div>
+            </div>
+        </div>
+
+        <!-- DESIGN DECISIONS -->
+        <div class="subsection">
+            <h3>Décisions de Design</h3>
+            <div class="iterations">
+                <div class="iter-card"><div class="iter-num">01</div><div class="iter-content"><h4>Coop + Compétition simultanées</h4><p>Les joueurs coopèrent contre les aliens mais se battent pour les cachettes. Le joueur éliminé revient en robot : il peut aider OU saboter ses coéquipiers.</p></div></div>
+                <div class="iter-card"><div class="iter-num">02</div><div class="iter-content"><h4>Jauge de puissance non-reset</h4><p>Survivre sans se cacher est risqué mais la puissance s'accumule sans reset. High risk, high reward.</p></div></div>
+                <div class="iter-card"><div class="iter-num">03</div><div class="iter-content"><h4>La bombe coopérative</h4><p>Tous les joueurs doivent appuyer simultanément pour lancer la bombe. Si un seul refuse, elle échoue. Crée des moments de tension sociale.</p></div></div>
+                <div class="iter-card"><div class="iter-num">04</div><div class="iter-content"><h4>Beat Sabers : rythme = puissance</h4><p>Certaines armes n'infligent des dégâts que sur le tempo. Les coups consécutifs au rythme multiplient les dégâts. Le gameplay rejoint la musique.</p></div></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════ -->
+<!--           FOCUSPALS               -->
+<!-- ══════════════════════════════════ -->
+<section id="focuspals" class="project-section">
+    <div class="container">
+        <p class="section-tag">PROJET 03</p>
+        <h2><img src="Logo_FocusPals.png" alt="FocusPals" class="title-logo"></h2>
+        <p class="section-sub">Assistant Personnel Gamifié · Godot 4 + Python + Gemini AI</p>
+
+        <!-- TAMA CHARACTER DECORATION -->
+        <div class="os-window tama-character-window">
+            <h3 class="os-window-header">Tama.exe</h3>
+            <div class="os-window-body" style="padding: 0;">
+                <img src="Tama.gif" alt="Tama" class="tama-character-img">
+            </div>
+        </div>
+
+        <!-- LE PITCH -->
+        <div class="os-window">
+            <h3 class="os-window-header">Le Pitch</h3>
+            <div class="os-window-body">
+                <p><strong>FocusPals</strong> est un assistant de productivité gamifié. Un personnage 3D animé (Tama) vit sur le bureau de l'utilisateur, l'aide à travailler via des sessions chronométrées, réagit vocalement grâce à l'IA (Gemini Live API), et synchronise entre desktop et mobile. Un projet qui fusionne <strong>game design, IA et UX</strong>.</p>
+            </div>
+        </div>
+
+        <!-- DEMO VIDEO -->
+        <div class="os-window">
+            <h3 class="os-window-header">Démo</h3>
+            <div class="os-window-body">
+                <div class="video-embed video-main">
+                    <iframe src="https://www.youtube.com/embed/GRSFd2XAOXQ" title="FocusPals - Démo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- GAME DESIGN SYSTEMES -->
+        <div class="os-window" style="margin-bottom: 24px;">
+            <h3 class="os-window-header">Game Design & Gamification</h3>
+            <div class="os-window-body">
+                <p class="section-body">L'application repose sur des mécaniques pures de game design pour transformer la procrastination en expérience ludique et récompenser l'effort sur le long terme :</p>
+                
+                <div class="mechanic-duo" style="margin-top: 20px;">
+                    <div class="tech-item">
+                        <h4><i class="fa-solid fa-scale-balanced"></i> Le Moteur A.S.C.</h4>
+                        <div class="tech-body">
+                            <p style="font-size: 13px; line-height: 1.5; margin-bottom: 0;">L'IA (Tama) t'évalue en direct via 3 jauges : <strong>Alignement</strong> (es-tu sur tes tâches ?), <strong>Suspicion</strong> (fais-tu autre chose ?) et <strong>Confiance</strong>. Si tu te laisses distraire constamment, la Confiance de Tama diminue : sa Suspicion montera presque 2x plus vite et elle deviendra beaucoup moins indulgente. Une vraie jauge de tension dynamique !</p>
+                        </div>
+                    </div>
+                    <div class="tech-item">
+                        <h4><i class="fa-solid fa-trophy"></i> Système de Progression</h4>
+                        <div class="tech-body">
+                            <p style="font-size: 13px; line-height: 1.5; margin-bottom: 0;">Le temps de travail et le nombre de tâches accomplies alimentent une mémoire à long terme (heatmap de calendrier). Tu débloques des <strong>Hauts Faits (Achievements)</strong> et obtiens de nouveaux <strong>Titres exclusifs</strong>. Ce feedback tangible crée une boucle d'engagement et donne un fort sentiment de progression.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ARCHITECTURE -->
+        <div class="os-window">
+            <h3 class="os-window-header">Architecture Technique</h3>
+            <div class="os-window-body">
+                <div class="tech-stack">
+                    <div class="tech-item">
+                        <h4><i class="fa-solid fa-gamepad"></i> Frontend (Godot 4)</h4>
+                        <div class="tech-body">
+                            <ul>
+                                <li>Personnage 3D animé (AnimationTree, Gaze System, Spring Bones)</li>
+                                <li>Menu radial avec feedbacks visuels</li>
+                                <li>Synchronisation desktop + mobile</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="tech-item">
+                        <h4><i class="fa-solid fa-brain"></i> Backend (Python)</h4>
+                        <div class="tech-body">
+                            <ul>
+                                <li>Intégration Gemini Live API (conversation vocale en temps réel)</li>
+                                <li>Système comportemental (humeur, suspicion, alignement)</li>
+                                <li>Communication WebSocket bidirectionnelle</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- DESIGN DECISIONS -->
+        <div class="os-window">
+            <h3 class="os-window-header">Décisions de Design</h3>
+            <div class="os-window-body">
+                <div class="iterations">
+                    <div class="iter-card"><div class="iter-num">01</div><div class="iter-content"><h4>Le personnage comme interface</h4><p>Pas de fenêtre classique. Tama vit sur le bureau, l'utilisateur interagit avec un personnage 3D, pas avec une app. Le game design sert l'UX.</p></div></div>
+                    <div class="iter-card"><div class="iter-num">02</div><div class="iter-content"><h4>Feedback instantané</h4><p>Tama apparaît immédiatement à l'appel, indépendamment du backend. Le visuel ne doit jamais attendre le réseau : la réactivité d'abord.</p></div></div>
+                    <div class="iter-card"><div class="iter-num">03</div><div class="iter-content"><h4>Personnalité émergente</h4><p>L'humeur de Tama décroît organiquement. Pas de script : le comportement émerge des systèmes (alignement, suspicion, mood decay).</p></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════ -->
+<!--          EXPERIENCE               -->
+<!-- ══════════════════════════════════ -->
+<section id="experience" class="section-alt">
+    <div class="container">
+        <p class="section-tag">PARCOURS</p>
+        <h2>Expérience & Formation</h2>
+
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-date">2022 — 2025</div>
+                <div class="timeline-content">
+                    <h3>Technicien Unreal Engine</h3>
+                    <p class="timeline-company">Alternative Développement (AD TV)</p>
+                    <ul>
+                        <li>Émissions TV en direct : rigueur, délais, zéro erreur</li>
+                        <li>Motion capture (Xsens), NDisplay, Virtual Production</li>
+                        <li>Blueprints, MetaHuman, éclairage temps réel</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">2019</div>
+                <div class="timeline-content">
+                    <h3>Environment Artist</h3>
+                    <p class="timeline-company">Cosmo AV</p>
+                    <ul>
+                        <li>Environnements UE4, FX, éclairage</li>
+                        <li>Modélisation Blender, shaders, Sequencer</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">2020 — 2022</div>
+                <div class="timeline-content">
+                    <h3>Master Game Art</h3>
+                    <p class="timeline-company">LISAA Paris</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">2016 — 2019</div>
+                <div class="timeline-content">
+                    <h3>Licence Médias Interactifs</h3>
+                    <p class="timeline-company">UCO Laval</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="skills-bar">
+            <h3>Compétences</h3>
+            <div class="skills-list">
+                <span class="skill-tag">Game Design (GDD)</span>
+                <span class="skill-tag">Level Design</span>
+                <span class="skill-tag">Équilibrage</span>
+                <span class="skill-tag">Unreal Engine</span>
+                <span class="skill-tag">Blueprints</span>
+                <span class="skill-tag">Godot 4</span>
+                <span class="skill-tag">Unity</span>
+                <span class="skill-tag">Prototypage</span>
+                <span class="skill-tag">Blender</span>
+                <span class="skill-tag">Intégration IA</span>
+                <span class="skill-tag">Photoshop</span>
+                <span class="skill-tag skill-tag-accent">Anglais C1</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <div class="container">
+        <h2>Contact</h2>
+        <p class="section-sub">Disponible en freelance</p>
+        <div class="contact-grid">
+            <a href="mailto:nicolas.biakou@gmail.com" class="contact-card">
+                <span class="contact-icon"><i class="fa-solid fa-envelope"></i></span>
+                <span>nicolas.biakou@gmail.com</span>
+            </a>
+            <a href="tel:+33671092995" class="contact-card">
+                <span class="contact-icon"><i class="fa-solid fa-phone"></i></span>
+                <span>+33 6 71 09 29 95</span>
+            </a>
+            <div class="contact-card">
+                <span class="contact-icon"><i class="fa-solid fa-location-dot"></i></span>
+                <span>Saint-Denis (93), Paris</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer><p>© 2026 Nicolas Biakou</p></footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
